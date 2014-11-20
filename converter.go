@@ -14,6 +14,8 @@ type Cell ole.IDispatch
 const (
 	xlsDefaultVersion = -4143
 	xlsVersion12      = 56
+	ContentTypeXLS    = "application/vnd.ms-excel"
+	ContentTypeXLSX   = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
 func NewExcel() (*Excel, error) {

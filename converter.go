@@ -97,7 +97,7 @@ func (w *Workbook) SaveAs(filename string, version int) error {
 }
 
 func (w *Worksheet) Cell(x, y int) (*Cell, error) {
-	res, err := oleutil.GetProperty((*ole.IDispatch)(w), "Cells", x, y)
+	res, err := oleutil.GetProperty((*ole.IDispatch)(w), "Cells", y, x)
 	if err != nil {
 		return nil, err
 	}
